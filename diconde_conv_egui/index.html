@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>egui web</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+<link rel="modulepreload" href="./tiff_to_dicom-1bfa2ed49644c9b2.js" crossorigin="anonymous" integrity="sha384-Cen7FGN6PHAUvaAmzROGw6gPCyzb729/iIRZNclFZGjIe6Om3UDiXVwZvisHgShf"><link rel="preload" href="./tiff_to_dicom-1bfa2ed49644c9b2_bg.wasm" crossorigin="anonymous" integrity="sha384-cGrSntRWL6h05T2vUJz1rx4Clqe08V65F67q6YEqG+0QlhAj91OZJTtjzUotMynv" as="fetch" type="application/wasm"></head>
+<body>
+    <canvas id="the_canvas_id"></canvas>
+
+<script type="module">
+import init, * as bindings from './tiff_to_dicom-1bfa2ed49644c9b2.js';
+const wasm = await init({ module_or_path: './tiff_to_dicom-1bfa2ed49644c9b2_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
