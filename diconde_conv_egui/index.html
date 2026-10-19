@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>egui web</title>
+    <title>TIFF to DICONDE Converter</title>
     <style>
         html, body {
             margin: 0;
@@ -16,14 +16,28 @@
             width: 100%;
             height: 100%;
         }
+        
+        #privacy_notice {
+            position: fixed;
+            right: 8px;
+            bottom: 4px;
+            padding: 4px 8px;
+            font: 12px system-ui, sans-serif;
+            color: #555;
+            background: rgba(255, 255, 255, 0.85);
+            pointer-events: none;
+        }
     </style>
-<link rel="modulepreload" href="./tiff_to_dicom-1bfa2ed49644c9b2.js" crossorigin="anonymous" integrity="sha384-Cen7FGN6PHAUvaAmzROGw6gPCyzb729/iIRZNclFZGjIe6Om3UDiXVwZvisHgShf"><link rel="preload" href="./tiff_to_dicom-1bfa2ed49644c9b2_bg.wasm" crossorigin="anonymous" integrity="sha384-cGrSntRWL6h05T2vUJz1rx4Clqe08V65F67q6YEqG+0QlhAj91OZJTtjzUotMynv" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/tiff_to_dicom-75f1cd842a4e6697.js" crossorigin="anonymous" integrity="sha384-9fG5Z56GpxDll5NezLHoTf71pCIA4lXFaEoj8f6HT1gv62F1jsiwwJMtxYVxxmLm"><link rel="preload" href="/tiff_to_dicom-75f1cd842a4e6697_bg.wasm" crossorigin="anonymous" integrity="sha384-/FX487kBNZIobBJq0nvXtQTx1DqH2/9zZjOY5FURnU6HCXsPjQZeQuuinK33TXQW" as="fetch" type="application/wasm"></head>
 <body>
     <canvas id="the_canvas_id"></canvas>
+    <div id="privacy_notice">
+        This is a client-side app: files are processed in your browser and are never uploaded to any server.
+    </div>
 
 <script type="module">
-import init, * as bindings from './tiff_to_dicom-1bfa2ed49644c9b2.js';
-const wasm = await init({ module_or_path: './tiff_to_dicom-1bfa2ed49644c9b2_bg.wasm' });
+import init, * as bindings from '/tiff_to_dicom-75f1cd842a4e6697.js';
+const wasm = await init({ module_or_path: '/tiff_to_dicom-75f1cd842a4e6697_bg.wasm' });
 
 
 window.wasmBindings = bindings;
