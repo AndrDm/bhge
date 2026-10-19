@@ -28,7 +28,7 @@
             pointer-events: none;
         }
     </style>
-<link rel="modulepreload" href="./tiff_to_dicom-e1e0cae1d40d365f.js" crossorigin="anonymous" integrity="sha384-10u/Bbnjtb7hqYoWEWtXb9PlbKX2dierYA1Q5n4wOkoGZi0s48IDZ2PiI6kAPodZ"><link rel="preload" href="./tiff_to_dicom-e1e0cae1d40d365f_bg.wasm" crossorigin="anonymous" integrity="sha384-Xe+Yv27/Uhf4xBUFfrOldsjJVaSxOPMbNr1KqvuR2DaJcnxGyPEIQWlYgJ1om6DB" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./tiff_to_dicom-a11fb972e6bdd6da.js" crossorigin="anonymous" integrity="sha384-10u/Bbnjtb7hqYoWEWtXb9PlbKX2dierYA1Q5n4wOkoGZi0s48IDZ2PiI6kAPodZ"><link rel="preload" href="./tiff_to_dicom-a11fb972e6bdd6da_bg.wasm" crossorigin="anonymous" integrity="sha384-O7mkImcMaepYLoI3Z1JiE6TtBci1sl7TcwiN0yS09s8I9t0KJGxE+Tho2mCq0shq" as="fetch" type="application/wasm"></head>
 <body>
     <canvas id="the_canvas_id"></canvas>
     <div id="privacy_notice">
@@ -36,8 +36,8 @@
     </div>
 
 <script type="module">
-import init, * as bindings from './tiff_to_dicom-e1e0cae1d40d365f.js';
-const wasm = await init({ module_or_path: './tiff_to_dicom-e1e0cae1d40d365f_bg.wasm' });
+import init, * as bindings from './tiff_to_dicom-a11fb972e6bdd6da.js';
+const wasm = await init({ module_or_path: './tiff_to_dicom-a11fb972e6bdd6da_bg.wasm' });
 
 
 window.wasmBindings = bindings;
