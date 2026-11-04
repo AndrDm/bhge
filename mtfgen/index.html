@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Noise Test Pattern Generator</title>
+
+	<style>
+		html,
+		body {
+			margin: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#the_canvas_id {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background: white;
+		}
+
+		#loading_text {
+			box-sizing: border-box;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			font-family: sans-serif;
+			color: gray;
+			padding: 2em;
+		}
+	</style>
+<link rel="modulepreload" href="./r-x-noise-34eca40d5d185a0d.js" crossorigin="anonymous" integrity="sha384-WJ16n9/1V01BPhAuSjoMniYTLwPTn8Ibhc6YHhflHVUYWcKc5I4wW8BNR1AjDb/A"><link rel="preload" href="./r-x-noise-34eca40d5d185a0d_bg.wasm" crossorigin="anonymous" integrity="sha384-jVoAZ1yRSmNWutHyD0Gjj4h6stSFCuKPl/H40KDa9X6IIhCVT5iB0S9ULS+zvBZ+" as="fetch" type="application/wasm"></head>
+<body>
+	<canvas id="the_canvas_id"></canvas>
+
+	<!-- Removed by the wasm bootstrap once eframe has started; replaced with a crash message on failure. -->
+	<div id="loading_text">Loading Noise Test Pattern Generator…</div>
+
+	
+<script type="module">
+import init, * as bindings from './r-x-noise-34eca40d5d185a0d.js';
+const wasm = await init({ module_or_path: './r-x-noise-34eca40d5d185a0d_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+</body>
+</html>
